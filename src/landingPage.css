@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+.landing-page {
+    text-align:center;
+    margin: auto;
+    margin-top: 15%;
+  }
+img{
+    width: 60px;
+} 
+  h1 {
+    color: #4980C0;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 40px;
+    font-size: 18px;
+    background-color: #4980C0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
