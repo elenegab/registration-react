@@ -19,6 +19,7 @@ import './landingPage.css';
 import { Link } from 'react-router-dom';
 
 function LandingPage() {
+  
   const buttonStyle = {
     display: 'inline-block',
     padding: '10px 20px',

@@ -1,0 +1,52 @@
+body{
+    background-color: white;
+}
+/* form.css */
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Put header and content at opposite ends */
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 50px;
+  }
+
+  .form-container h1 {
+    margin: 0;
+  }
+  
+  .form-container p {
+    margin: 0;
+  }
+  
+  /* Style the image container */
+  .form-container div {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .form-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optional: Add styles for the header and content */
+  .header {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+  }
+  
+  .content {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+  }
+  

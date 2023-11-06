@@ -37,8 +37,9 @@ function Registration() {
     if (name && image) {
       localStorage.setItem('userName', name);
       localStorage.setItem('userImage', URL.createObjectURL(image));
-      // Redirect to the next page using the navigate function
-      navigate('/popup');
+      navigate('/form', { state: { name, image: URL.createObjectURL(image) } });
+
+
     } else {
       alert('Please provide a name and image.');
     }
