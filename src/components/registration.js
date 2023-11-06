@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import './registration.css'; // You can create a CSS file for styling
 import Image from '../photos/add_a_photo_FILL0_wght400_GRAD0_opsz48 1.png';
 
+import { useNavigate } from 'react-router-dom';
+
 function Registration() {
+  const navigate = useNavigate(); // Define useNavigate at the component level
+
   const [name, setName] = useState('');
   const [image, setImage] = useState(null);
 
@@ -14,7 +18,7 @@ function Registration() {
   const handleImageChange = (e) => {
     const selectedFile = e.target.files[0];
     setImage(selectedFile);
-  
+
     // To display the selected file's name
     const fileLabel = document.getElementById('fileLabel');
     if (selectedFile) {
@@ -28,29 +32,13 @@ function Registration() {
     setName(e.target.value);
   };
 
-  
-  
-//   // ...
- 
-  
-  // <label htmlFor="fileInput" onClick={handleImageClick}>
-  //   <div className="placeholder" id="fileLabel">
-  //     No file selected
-  //   </div>
-  // </label>
-  
-
-  
-
   const handleRegistration = () => {
     // Validate the input, then store it in localStorage
     if (name && image) {
       localStorage.setItem('userName', name);
-      // You can use a unique key to store the image in localStorage
-      // For simplicity, you might consider using a backend or cloud storage for images in a production app
-      localStorage.setItem('userImage', URL.createObjectURL(image)); // Store the image URL
-      // Redirect to the next page
-      // You can use React Router to navigate to the next page
+      localStorage.setItem('userImage', URL.createObjectURL(image));
+      // Redirect to the next page using the navigate function
+      navigate('/popup');
     } else {
       alert('Please provide a name and image.');
     }
@@ -63,7 +51,7 @@ function Registration() {
       <label htmlFor="fileInput" onClick={handleImageClick}>
         {image ? (
           <img src={URL.createObjectURL(image)} alt="User's photo" />
-          ) : (
+        ) : (
           <div className="placeholder">
             <img src={Image} alt='photos'></img>
           </div>
@@ -85,4 +73,3 @@ function Registration() {
 }
 
 export default Registration;
-
