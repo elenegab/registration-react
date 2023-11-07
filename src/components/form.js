@@ -9,7 +9,6 @@ function Form() {
   const { name, image } = state || {};
 
   const handleImageClick = () => {
-    // Navigate to /popup when the photo is clicked
     navigate('/popup');
   };
 
@@ -32,3 +31,4 @@ function Form() {
 }
 
 export default Form;
+ 

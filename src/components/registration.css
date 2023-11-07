@@ -1,7 +1,6 @@
 body{
     background-color: black;
 }
-/* registration.css */
 .registration-container {
     margin: auto;
     margin-top: 50px;
@@ -12,7 +11,7 @@ body{
     height: 500px;
     width: 500px;
     border-radius: 20px;
-    background-color: #f0f0f0; /* Optional background color */
+    background-color: #f0f0f0; 
   }
   .name{
     width: 250px;

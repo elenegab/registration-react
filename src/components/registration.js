@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import './registration.css'; // You can create a CSS file for styling
+import './registration.css'; 
 import Image from '../photos/add_a_photo_FILL0_wght400_GRAD0_opsz48 1.png';
 
 import { useNavigate } from 'react-router-dom';
 
 function Registration() {
-  const navigate = useNavigate(); // Define useNavigate at the component level
+  const navigate = useNavigate(); 
 
   const [name, setName] = useState('');
   const [image, setImage] = useState(null);
 
   const handleImageClick = () => {
-    // Trigger the file input when the image is clicked
     document.getElementById('fileInput').click();
   };
 
@@ -19,7 +18,6 @@ function Registration() {
     const selectedFile = e.target.files[0];
     setImage(selectedFile);
 
-    // To display the selected file's name
     const fileLabel = document.getElementById('fileLabel');
     if (selectedFile) {
       fileLabel.innerText = selectedFile.name;
@@ -33,7 +31,6 @@ function Registration() {
   };
 
   const handleRegistration = () => {
-    // Validate the input, then store it in localStorage
     if (name && image) {
       localStorage.setItem('userName', name);
       localStorage.setItem('userImage', URL.createObjectURL(image));
