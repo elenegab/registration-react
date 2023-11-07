@@ -18,20 +18,15 @@
     const handleApiClick = () => {
         navigate('/api')
     }
-    // State to manage the search input value
     const [searchInput, setSearchInput] = useState('');
 
-    // Handler for updating the search input
     const handleSearchInputChange = (e) => {
         setSearchInput(e.target.value);
     };
 
-    // Handler for searching (you can customize this logic)
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        // Perform the search logic here based on the searchInput value
         console.log('Search performed:', searchInput);
-        // You can add the logic to fetch data from an API or update the UI as needed.
     };
 
     return (
