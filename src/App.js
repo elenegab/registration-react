@@ -5,7 +5,7 @@ import LandingPage from './components/landingPage';
 import Registration from './components/registration';
 import Popup from './components/Popup'; 
 import Form from './components/form'; 
-import { Link } from 'react-router-dom';
+import ApiPage from './components/ApiPage'; // Import your ApiPage component
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/form" element={<Form />}/>
           <Route path="/popup" element={<Popup />} />
+          <Route path="/api" element={<ApiPage />} /> {/* Add this route for the ApiPage */}
           <Route path="/*" element={<Navigate to="/" />} />
           
         </Routes>
