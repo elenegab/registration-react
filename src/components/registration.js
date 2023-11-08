@@ -48,7 +48,7 @@ function Registration() {
       <p>add a photo</p>
       <label htmlFor="fileInput" onClick={handleImageClick}>
         {image ? (
-          <img src={URL.createObjectURL(image)} alt="User's photo" />
+          <img src={URL.createObjectURL(image)}  />
         ) : (
           <div className="placeholder">
             <img src={Image} alt='photos'></img>

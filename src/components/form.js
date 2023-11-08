@@ -40,7 +40,7 @@
                 {name && <p>Your Name: {name}</p>}
                 {image && (
                 <div onClick={handleImageClick} style={{ cursor: 'pointer' }}>
-                    <img src={image} alt="Your Uploaded Photo" />
+                    <img src={image} />
                 </div>
                 )}
             </div>
